@@ -9,15 +9,15 @@ Seven tiers above Create's Basic vault: Copper, Iron, Gold, Diamond, Emerald, Ob
 | Tier | Slots per block | Items per stack | Total vs. Basic |
 |---|---|---|---|
 | Basic (Create) | 20 | 64 | 1x |
-| Copper | 24 | 64 | 1.2x |
-| Iron | 28 | 72 | 1.6x |
-| Gold | 32 | 80 | 2.0x |
-| Diamond | 36 | 88 | 2.5x |
-| Emerald | 40 | 96 | 3.0x |
-| Obsidian | 44 | 99 | 3.4x |
-| Netherite | 48 | 99 | 3.7x |
+| Copper | 27 | 72 | 1.5x |
+| Iron | 36 | 80 | 2.25x |
+| Gold | 44 | 88 | 3x |
+| Diamond | 53 | 96 | 4x |
+| Emerald | 65 | 99 | 5x |
+| Obsidian | 81 | 99 | 6.25x |
+| Netherite | 103 | 99 | 8x |
 
-Capacity grows on two axes on purpose. Slot count is what every inventory scan in the game has to walk, so most of the growth is in stack depth instead, which costs nothing to iterate. Both are configurable per tier.
+Capacity grows on two axes on purpose. Slot count is what every inventory scan in the game has to walk, so each tier takes as much of its growth from stack depth as it can before spending any on slots — a top-tier vault holds 8x a Basic one while needing about a third fewer slots than storing that much the naive way. Both axes are configurable per tier.
 
 ## Two ways to upgrade
 
