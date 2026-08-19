@@ -45,11 +45,19 @@ Without Vibrant Vaults, only the plain Item Vault tiers are registered, and the 
 
 With Create: Connected installed, its Item Silo gets the same seven tiers. Tier silos form the same multiblocks, share one inventory, keep their connected textures, take the same sneak-right-click upgrade, and support the click-the-top-face trick that fills a whole 3x3 cross-section in one go. Capacity per block matches the equivalent vault tier.
 
+Silos are drawn to match the vertical vaults standing next to them: with Vibrant Vaults installed they use exactly the same art, and without it they fall back to Create's own vault art so they are still textured.
+
+## Design n' Decor support
+
+With Design n' Decor installed, its Containers get the tier ladder too — all 33 finishes, which is the undyed container plus its sixteen dyes in both the plain and solid styles, across seven tiers. That is 231 more blocks.
+
+A tiered container is a real Design n' Decor container in every way that matters. It keeps its colour and style through an upgrade, forms the same multiblocks, and clicking the end of a formed run still fills its whole cross-section in one go. Like the Shipping Containers, a container is painted rather than trimmed in grey, so it shows its tier as small corner studs rather than a metal recolour.
+
 ## Tools
 
 **Scanner** — right-click any vault, container or silo and a panel reports its tier, how many blocks the structure formed, slots total and per block, stack limit, what it holds against its capacity, and how many kinds of item are in it. It reads through the item capability, so it works on Create's own vaults and Vibrant Vaults' too, not just this mod's.
 
-**Display Link** — three extra readouts for a board: Vault Slots Used, Vault Items Stored and Vault Tier & Size. Each can be shown as stored/capacity, stored only, space left, capacity only or a percentage. Stick the link on the vault or on a Threshold Switch watching it; either works.
+**Display Link** — three extra readouts for a board: Vault Slots Used, Vault Items Stored and Vault Tier & Size. They read any tiered block, vault, silo or container alike. Each can be shown as stored/capacity, stored only, space left, capacity only or a percentage. Stick the link on the vault or on a Threshold Switch watching it; either works.
 
 **Threshold Switch** — preset buttons on its screen jump a threshold straight to min, a quarter, half, three quarters or max of what the observed inventory holds, which matters once an inventory runs to seven figures. Hold Shift to jump between the two ends. The block also gains Clipboard support, and it copies what the thresholds mean rather than what they read - copy a switch watching a Netherite vault, paste onto one watching a barrel, and both behave the same way at their own scale.
 
@@ -57,7 +65,7 @@ With Create: Connected installed, its Item Silo gets the same seven tiers. Tier 
 
 Create refreshes a vault's comparators on every single slot change, and each refresh walks the entire multiblock. Filling a large vault therefore costs dozens of full structure walks per tick. This mod collapses that to at most one per tick, which applies to Create's own vaults and other addons' vaults as well as its own. It can be turned off in the config.
 
-Jade's item readout is also served directly rather than through its generic collector, so vault and silo contents appear immediately instead of being counted up over several ticks.
+Jade's item readout is also served directly rather than through its generic collector, so vault, silo and container contents appear immediately instead of being counted up over several ticks.
 
 The mod ships no copies of vault art. Every tier texture is built by the game while the block atlas is stitched, from the un-tiered block's own sprite plus a small tier overlay, which keeps the download under 2 MB. A side effect is that resource packs retexturing Create's or Vibrant Vaults' vaults automatically retexture the tier versions to match.
 
@@ -73,6 +81,7 @@ Every one of the 28 upgrade items has its own Ponder scene showing that exact tr
 
 - Minecraft 1.21.1, NeoForge
 - Create 6.0.10 or newer
-- Create: Vibrant Vaults (optional) — adds the container, vertical and coloured tiers
+- Create: Vibrant Vaults (optional) — adds the Shipping Container, vertical and coloured tiers
 - Create: Connected (optional) — adds the Item Silo tiers
+- Design n' Decor (optional) — adds the Container tiers
 - Jade (optional) — instant vault contents readout
